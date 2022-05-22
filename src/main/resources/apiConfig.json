@@ -1,0 +1,56 @@
+{
+  "packages":
+  {
+    "entity":
+    {
+      "entity": "com.springapigeneratortest.core.domain.entity",
+      "dto":    "com.springapigeneratortest.core.web.dto"
+    }
+
+  },
+  "entity":
+          [
+            {
+              "name": "User",
+              "DBProperty":
+              {
+                "Table":
+                {
+                  "schema": "SpringApiGeneratorTest",
+                  "name": "user"
+                }
+              },
+              "fields":
+                      [
+                        {
+                          "name": "id",
+                          "type": "Long",
+                          "FieldDBProperty":
+                          {
+                            "isId": true,
+                            "Size": 50,
+                            "Column":
+                            {
+                              "length": 50,
+                              "name": "id"
+                            },
+                            "GeneratedValue":
+                            {
+                              "strategy": 1,
+                              "generator": "USER_SEQ"
+                            },
+                            "SequenceGenerator":
+                            {
+                              "schema": "entityGenerationTest",
+                              "name" : "USER_SEQ",
+                              "sequenceName": "",
+                              "catalog": "",
+                              "initialValue": 0,
+                              "allocationSize": 1
+                            }
+                          }
+                        }
+                      ]
+            }
+          ]
+}

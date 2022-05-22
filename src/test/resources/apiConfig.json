@@ -1,0 +1,69 @@
+{
+
+  "packages":
+  {
+    "entity":
+    {
+      "entity": "core.domain.entity",
+      "dto":    "core.web.dto"
+    }
+
+  },
+  "entity":
+          [
+            {
+              "name": "User",
+              "DBProperty":
+              {
+                "Table":
+                {
+                  "schema": "SpringApiGeneratorTest",
+                  "name": "user"
+                }
+              },
+              "fields":
+                      [
+                        {
+                          "name": "id",
+                          "type": "Long",
+                          "FieldDBProperty":
+                          {
+                            "isId": true,
+                            "Size": null,
+                            "Column": null,
+                            "GeneratedValue":
+                            {
+                              "strategy": 1,
+                              "generator": "USER_SEQ"
+                            },
+                            "SequenceGenerator":
+                            {
+                              "schema": "entityGenerationTest",
+                              "name" : "USER_SEQ",
+                              "sequenceName": "",
+                              "catalog": "",
+                              "initialValue": 0,
+                              "allocationSize": 1
+                            }
+                          }
+                        },
+                        {
+                          "name": "username",
+                          "type": "String",
+                          "FieldDBProperty":
+                          {
+                            "isId": false,
+                            "Size": 50,
+                            "Column":
+                            {
+                              "length": 50,
+                              "name": "username"
+                            },
+                            "GeneratedValue": null,
+                            "SequenceGenerator": null
+                          }
+                        }
+                      ]
+            }
+          ]
+}
